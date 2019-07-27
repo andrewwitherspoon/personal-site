@@ -1,0 +1,695 @@
+/**
+ * Mixins
+ */
+/* Flex box layouts -- first, for the flexible container */
+/* Overload the .flex-flow mixin to change row to horizontal etc for old syntax */
+/* Flex box layouts -- second, for the contained boxes. */
+/* If you set a basis, you should also set the width or height property on the
+   element (correspondng to row/column orientation) to match, as the old box-flex
+   syntax doesn't support a basis param */
+/* Drop shadows */
+/* Rounded Corners */
+/* Transitions */
+/* Transforms */
+/* Gradients */
+/* User Select */
+/**
+ * Tabular figures (use monospaced version of the digit characters, if the font
+ * has them). This helps numbers stay the same width when they change (for
+ * example, when animating number values, this keeps each decimal place in the
+ * same spot during animation)
+ */
+/**
+ * Box Sizing Border Box
+ * http://paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+/* Animation */
+/* Animation Delay */
+/* Animation Fill Mode */
+/* Animation Direction */
+/* Perspective (for 3D transforms */
+/* 3D transform shortcuts */
+/* Color for the placeholder attribute of inputs and textareas */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+::selection {
+  background: rgba(0, 0, 0, 0.08);
+}
+body {
+  background: #f9f9f9;
+  color: #555555;
+  font-family: 'Merriweather', serif;
+}
+.body-wrapper {
+  margin: 0 auto;
+  padding: 50px 0;
+  width: 1024px;
+}
+.image {
+  display: block;
+}
+.nav {
+  -moz-animation: fadeIn 1s ease;
+  -ms-animation: fadeIn 1s ease;
+  -o-animation: fadeIn 1s ease;
+  -webkit-animation: fadeIn 1s ease;
+  animation: fadeIn 1s ease;
+  color: rgba(85, 85, 85, 0.8);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 10px;
+  height: 41px;
+  width: 100%;
+  z-index: 1;
+}
+.nav .name {
+  position: absolute;
+  top: 9px;
+  left: 20px;
+}
+.nav h1 {
+  display: inline-block;
+  left: 35px;
+  margin-left: 2px;
+  position: absolute;
+  top: 4px;
+  width: 250px;
+}
+.nav .monogram {
+  display: inline-block;
+  height: 21px;
+  opacity: 0.6;
+  width: 26px;
+}
+.nav .contact {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+.nav .email {
+  -moz-transition: opacity 0.2s ease;
+  /* FF 4+ */
+
+  -webkit-transition: opacity 0.2s ease;
+  /* Safari 3.2+, Chrome */
+
+  -o-transition: opacity 0.2s ease;
+  -ms-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  display: inline-block;
+  cursor: pointer;
+  height: 14px;
+  margin-left: 10px;
+  opacity: 0.6;
+  position: relative;
+  top: 2px;
+  width: 18px;
+}
+.nav .email:hover {
+  opacity: 1;
+}
+.intro {
+  background: #f2f2f2;
+  color: #555555;
+  display: block;
+  padding: 100px 0;
+  text-align: center;
+  width: 100%;
+}
+.intro .info {
+  -moz-animation: fadeInDown 0.5s ease;
+  -ms-animation: fadeInDown 0.5s ease;
+  -o-animation: fadeInDown 0.5s ease;
+  -webkit-animation: fadeInDown 0.5s ease;
+  animation: fadeInDown 0.5s ease;
+  display: block;
+  font-size: 50px;
+  line-height: 80px;
+  margin: 0 auto;
+  padding-top: 50px;
+  width: 724px;
+}
+.intro .info a {
+  -moz-transition: all 0.2s ease;
+  /* FF 4+ */
+
+  -webkit-transition: all 0.2s ease;
+  /* Safari 3.2+, Chrome */
+
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid transparent;
+  color: #555555;
+  text-decoration: none;
+}
+.intro .info a:hover {
+  border-bottom: 1px solid rgba(85, 85, 85, 0.2);
+}
+.intro .contact {
+  -moz-animation: fadeInDown 0.5s ease;
+  -ms-animation: fadeInDown 0.5s ease;
+  -o-animation: fadeInDown 0.5s ease;
+  -webkit-animation: fadeInDown 0.5s ease;
+  animation: fadeInDown 0.5s ease;
+  -moz-transition: all 0.2s ease;
+  /* FF 4+ */
+
+  -webkit-transition: all 0.2s ease;
+  /* Safari 3.2+, Chrome */
+
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border-radius: 3px;
+  color: rgba(4, 151, 158, 0.8);
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+  margin-top: 50px;
+  text-decoration: none;
+  top: 0;
+}
+.intro .contact:hover {
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+  /* FF 3.5+ */
+
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+  /* Safari 3+, Chrome */
+
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+  /* Opera 10.5, IE 9, Chrome 10+ */
+
+  background: rgba(249, 249, 249, 0.8);
+  color: #04979e;
+  top: -5px;
+}
+.work {
+  padding: 50px 0;
+}
+.work h1 {
+  font-size: 14px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+.project .project-info {
+  margin: 0 auto;
+  width: 724px;
+  padding-bottom: 25px;
+}
+.project .title {
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 25px;
+}
+.project .info {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 40px;
+  padding-bottom: 25px;
+}
+.project .role {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+.project .role .me {
+  color: rgba(85, 85, 85, 0.5);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-right: 5px;
+  text-transform: uppercase;
+}
+.project .role .me .my-role {
+  font-family: 'Open Sans', sans-serif;
+  color: #555555;
+  font-size: 14px;
+  margin: 0 10px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.project .role .contributor {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 2px;
+  position: relative;
+  text-transform: uppercase;
+}
+.project .role .contributor a {
+  font-weight: 700;
+  text-decoration: none;
+  opacity: 0.8;
+}
+.project .role .contributor a.lasers {
+  color: #7ab317;
+}
+.project .role .contributor a.dvd {
+  color: #5b527f;
+}
+.project .role .contributor a.harry {
+  color: #1693a7;
+}
+.project .role .contributor a.jem {
+  color: #e6781e;
+}
+.project .role .contributor a.danny {
+  color: #dc5b3e;
+}
+.project .role .contributor a.tom {
+  color: #3d526d;
+}
+.project .role .contributor a.josh {
+  color: #ff9d2e;
+}
+.project .role .contributor:hover .detail {
+  display: block;
+}
+.project .role .contributor .detail {
+  -moz-animation: fadeIn 0.2s ease;
+  -ms-animation: fadeIn 0.2s ease;
+  -o-animation: fadeIn 0.2s ease;
+  -webkit-animation: fadeIn 0.2s ease;
+  animation: fadeIn 0.2s ease;
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+  /* FF 3.5+ */
+
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+  /* Safari 3+, Chrome */
+
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+  /* Opera 10.5, IE 9, Chrome 10+ */
+
+  color: #555555;
+  background: white;
+  border-radius: 2px;
+  display: none;
+  font-size: 12px;
+  line-height: 22px;
+  padding: 15px;
+  position: absolute;
+  text-transform: none;
+  top: -85px;
+  white-space: nowrap;
+}
+.project .role .contributor .detail span {
+  color: rgba(85, 85, 85, 0.5);
+  display: block;
+}
+.project .role .contributor .detail:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #ffffff;
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0px;
+}
+.project .images .image img {
+  border-radius: 2px;
+  height: 602px;
+  width: 100%;
+}
+.project .images .image.hero {
+  display: block;
+  height: 602px;
+  margin: 50px 0;
+  position: relative;
+  width: 100%;
+}
+.project .images .image.gen {
+  -moz-animation: genBg 10s infinite;
+  -ms-animation: genBg 10s infinite;
+  -o-animation: genBg 10s infinite;
+  -webkit-animation: genBg 10s infinite;
+  animation: genBg 10s infinite;
+  background-repeat: no-repeat;
+}
+.project .images .image.gen .finger {
+  -moz-animation: genFinger 10s infinite;
+  -ms-animation: genFinger 10s infinite;
+  -o-animation: genFinger 10s infinite;
+  -webkit-animation: genFinger 10s infinite;
+  animation: genFinger 10s infinite;
+  display: block;
+  background: rgba(4, 151, 158, 0.5);
+  border-radius: 50%;
+  height: 50px;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 50px;
+}
+.project .images .image .caption {
+  -moz-transition: all 0.2s ease;
+  /* FF 4+ */
+
+  -webkit-transition: all 0.2s ease;
+  /* Safari 3.2+, Chrome */
+
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background: rgba(249, 249, 249, 0.9);
+  bottom: -30px;
+  font-size: 12px;
+  position: absolute;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  opacity: 0;
+  width: calc(100% - 20px);
+  height: 13px;
+}
+.project .images .image:hover .caption {
+  display: block;
+  opacity: 1;
+  bottom: 0;
+}
+.footer {
+  background: white;
+  color: rgba(85, 85, 85, 0.5);
+  margin: 0 auto;
+  padding: 100px 0;
+  text-align: center;
+  width: 100%;
+}
+.footer .kansas {
+  padding-bottom: 50px;
+}
+.footer .contact-links {
+  padding-bottom: 50px;
+}
+.footer .contact-links span {
+  margin: 0 20px;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes genBg {
+  0% {
+    background: url(../images/cba_gen_1.png);
+    -webkit-background-size: contain;
+  }
+  30% {
+    background: url(../images/cba_gen_1.png);
+    -webkit-background-size: contain;
+  }
+  33% {
+    background: url(../images/cba_gen_2.png);
+    -webkit-background-size: contain;
+  }
+  63% {
+    background: url(../images/cba_gen_2.png);
+    -webkit-background-size: contain;
+  }
+  66% {
+    background: url(../images/cba_gen_3.png);
+    -webkit-background-size: contain;
+  }
+  97% {
+    background: url(../images/cba_gen_3.png);
+    -webkit-background-size: contain;
+  }
+  100% {
+    background: url(../images/cba_gen_1.png);
+    -webkit-background-size: contain;
+  }
+}
+@keyframes genBg {
+  0% {
+    background: url(../images/cba_gen_1.png);
+    background-size: contain;
+  }
+  30% {
+    background: url(../images/cba_gen_1.png);
+    background-size: contain;
+  }
+  33% {
+    background: url(../images/cba_gen_2.png);
+    background-size: contain;
+  }
+  63% {
+    background: url(../images/cba_gen_2.png);
+    background-size: contain;
+  }
+  66% {
+    background: url(../images/cba_gen_3.png);
+    background-size: contain;
+  }
+  97% {
+    background: url(../images/cba_gen_3.png);
+    background-size: contain;
+  }
+  100% {
+    background: url(../images/cba_gen_1.png);
+    background-size: contain;
+  }
+}
+@-webkit-keyframes genFinger {
+  0% {
+    -webkit-transform: translateX(0%) translateY(0%);
+    -webkit-box-shadow: 0 0 rgba(4, 151, 158, 0);
+    opacity: 0.5;
+  }
+  10% {
+    -webkit-transform: translateX(210%) translateY(320%);
+    -webkit-box-shadow: 0 0 rgba(4, 151, 158, 0);
+    opacity: 1;
+  }
+  13% {
+    -webkit-transform: translateX(210%) translateY(320%);
+    -webkit-box-shadow: 0 0 rgba(4, 151, 158, 0);
+    opacity: 1;
+  }
+  15% {
+    -webkit-transform: translateX(210%) translateY(320%) scale(0.6);
+    -webkit-box-shadow: 0 0 10px 5px rgba(4, 151, 158, 0.4);
+    opacity: 1;
+  }
+  16% {
+    -webkit-transform: translateX(210%) translateY(320%) scale(1);
+    -webkit-box-shadow: 0 0 5px 5px rgba(4, 151, 158, 0.2);
+    opacity: 1;
+  }
+  17% {
+    -webkit-transform: translateX(210%) translateY(320%) scale(1.05);
+    -webkit-box-shadow: 0 0 25px 5px rgba(4, 151, 158, 0.05);
+    opacity: 1;
+  }
+  18% {
+    -webkit-transform: translateX(210%) translateY(320%) scale(1);
+    -webkit-box-shadow: 0 0 rgba(4, 151, 158, 0);
+    opacity: 1;
+  }
+  25% {
+    -webkit-transform: translateX(210%) translateY(320%);
+    -webkit-box-shadow: 0 0 rgba(4, 151, 158, 0);
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: translateY(709%) translateX(1530%);
+    -webkit-box-shadow: 0 0 rgba(4, 151, 158, 0);
+    opacity: 0;
+  }
+  44% {
+    -webkit-transform: translateY(909%) translateX(1830%);
+    -webkit-box-shadow: 0 0 rgba(4, 151, 158, 0);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateY(909%) translateX(1830%);
+    -webkit-box-shadow: 0 0 rgba(4, 151, 158, 0);
+    opacity: 1;
+  }
+  52% {
+    -webkit-transform: translateY(909%) translateX(1830%) scale(0.6);
+    -webkit-box-shadow: 0 0 10px 5px rgba(4, 151, 158, 0.4);
+    opacity: 1;
+  }
+  53% {
+    -webkit-transform: translateY(909%) translateX(1830%) scale(1);
+    -webkit-box-shadow: 0 0 5px 5px rgba(4, 151, 158, 0.2);
+    opacity: 1;
+  }
+  54% {
+    -webkit-transform: translateY(909%) translateX(1830%) scale(1.05);
+    -webkit-box-shadow: 0 0 25px 5px rgba(4, 151, 158, 0.05);
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: translateY(909%) translateX(1830%) scale(1);
+    -webkit-box-shadow: 0 0 rgba(4, 151, 158, 0);
+    opacity: 1;
+  }
+  65% {
+    -webkit-transform: translateY(950%) translateX(1950%) scale(1);
+    -webkit-box-shadow: 0 0 rgba(4, 151, 158, 0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(950%) translateX(1950%) scale(1);
+    -webkit-box-shadow: 0 0 rgba(4, 151, 158, 0);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .body-wrapper {
+    width: 724px;
+  }
+  .project .images .image img {
+    height: 422px;
+  }
+  .project .images .image.hero {
+    height: 422px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .body-wrapper {
+    padding: 10px 0;
+    width: 100%;
+  }
+  .nav {
+    -moz-animation: fadeInDown 0.5s ease;
+    -ms-animation: fadeInDown 0.5s ease;
+    -o-animation: fadeInDown 0.5s ease;
+    -webkit-animation: fadeInDown 0.5s ease;
+    animation: fadeInDown 0.5s ease;
+    left: 5%;
+    width: 90%;
+  }
+  .nav h1 {
+    left: 0;
+    margin-left: 5px;
+    position: relative;
+    top: -6px;
+    width: auto;
+  }
+  .nav .name {
+    display: block;
+    left: 0;
+    margin-left: 0;
+    position: relative;
+    top: 10px;
+    width: 100%;
+  }
+  .nav .contact {
+    display: none;
+  }
+  .intro {
+    padding: 40px 0;
+    text-align: left;
+  }
+  .intro .info {
+    font-size: 24px;
+    line-height: 40px;
+    padding-top: 110px;
+    width: 90%;
+  }
+  .intro .contact {
+    margin-top: 20px;
+  }
+  .work {
+    -moz-animation: fadeIn 1s ease;
+    -ms-animation: fadeIn 1s ease;
+    -o-animation: fadeIn 1s ease;
+    -webkit-animation: fadeIn 1s ease;
+    animation: fadeIn 1s ease;
+    padding: 40px 0;
+  }
+  .project .project-info {
+    width: 90%;
+  }
+  .project .title {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .project .info {
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 500;
+  }
+  .project .role .me {
+    display: block;
+    line-height: 21px;
+  }
+  .project .role .me .label {
+    display: block;
+    padding-bottom: 10px;
+  }
+  .project .role .me .my-role {
+    display: block;
+    margin: 0;
+  }
+  .project .role .contributor {
+    padding-top: 5px;
+  }
+  .project .images .image img {
+    height: 189px;
+  }
+  .project .images .image.hero {
+    height: 189px;
+    margin: 20px 0;
+  }
+}
