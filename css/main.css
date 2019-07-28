@@ -141,7 +141,6 @@ Work
 Footer
 ***************************************************/
 footer {
-  opacity: 0.5;
   margin: 0 auto;
   width: 100%;
   text-align: center;
@@ -149,11 +148,16 @@ footer {
 }
 
 footer p {
+  opacity: 0.6;
   font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 20px;
+}
+
+footer img {
+  opacity: 0.5;
 }
 
 /***************************************************
