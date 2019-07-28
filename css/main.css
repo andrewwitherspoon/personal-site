@@ -14,7 +14,7 @@ body {
 }
 
 .wrapper {
-  width: 1000px;
+  width: 965px;
   margin: 0 auto;
   text-align: center;
 }
@@ -23,28 +23,26 @@ body {
 Intro
 ***************************************************/
 .intro {
-  width: 740px;
+  width: 720px;
   text-align: left;
-  margin: 50px 0 85px -45px;
+  margin: 50px 0 85px 0;
 }
 
 .monogram {
-  margin-right: 24px;
   opacity: 0.4;
+  margin-bottom: 50px;
 }
 
 h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 42px;
   font-weight: bold;
-  display: inline-block;
   margin-bottom: 30px;
 }
 
 .intro p {
   font-size: 24px;
   line-height: 1.75;
-  padding-left: 48px;
 }
 
 .intro a {
@@ -62,7 +60,6 @@ h1 {
 
 .links {
   margin-top: 20px;
-  padding-left: 48px;
 }
 
 .links li {
@@ -103,6 +100,10 @@ Work
     0 15px 17px rgba(0,0,0,0.15);
   display: block;
   transform: translate3D(0, -5px, 0);
+}
+
+.work li:nth-child(3n+3) {
+  margin-right: 0;
 }
 
 .work li:hover a {
@@ -158,27 +159,20 @@ footer p {
 /***************************************************
 Media queries
 ***************************************************/
-@media(max-width: 1000px) {
+@media(max-width: 965px) {
   .wrapper {
     width: calc(100% - 30px);
     padding: 0 15px;
   }
   .monogram {
     margin-bottom: 20px;
-    margin-right: 0;
-  }
-  h1 {
-    display: block;
   }
   .intro {
     margin: 20px 0 85px 0;
     width: 100%;
   }
-  .intro p {
-    padding-left: 0;
-  }
-  .links {
-    padding-left: 0;
+  .work li:nth-child(3n+3) {
+    margin-right: 30px;
   }
 }
 
@@ -208,6 +202,9 @@ Media queries
   .work li {
     margin: 0 15px 15px 0;
     width: calc(50% - 8px)
+  }
+  .work li:nth-child(3n+3) {
+    margin-right: 15px;
   }
   .work li:nth-child(even) {
     margin-right: 0;
