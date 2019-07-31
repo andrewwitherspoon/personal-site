@@ -205,7 +205,7 @@ Media queries
     font-size: 12px;
   }
   .work li {
-    height: 50px;
+    height: 60px;
     margin: 0 15px 15px 0;
     text-align: left;
     width: 100%;
@@ -222,19 +222,18 @@ Media queries
   }
   .work li img {
     box-shadow: 1px 0px 0 0px rgba(0,0,0,.08);
-    height: 50px;
-    width: 75px;
+    height: 60px;
+    width: 90px;
   }
   .work li a {
     color: #4a4a4a;
-    font-size: 13px;
   }
   .work li p {
     display: inline-block;
     height: auto;
     padding: 6px 6px 0 6px;
     vertical-align: top;
-    width: calc(100% - 91px);
+    width: calc(100% - 106px);
   }
 }
 
