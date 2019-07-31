@@ -8,7 +8,7 @@ Global body styles
 }
 
 body {
-  background: #f2f2f2;
+  background: #e8e8e8;
   color: #4a4a4a;
   font-family: 'EB Garamond', serif;
 }
@@ -82,7 +82,7 @@ h1 {
 Work
 ***************************************************/
 .work li {
-  box-shadow: 0 0 1px rgba(0,0,0,0.25);
+  box-shadow: 0 0 1px rgba(0,0,0,0);
   background-color: #fff;
   border-radius: 3px;
   display: inline-block;
@@ -95,10 +95,7 @@ Work
 }
 
 .work li:hover {
-  box-shadow:
-    0 0 1px rgba(0,0,0,0.25),
-    0 15px 17px rgba(0,0,0,0.15);
-  display: block;
+  box-shadow: 0 15px 17px rgba(0,0,0,0.20);
   transform: translate3D(0, -5px, 0);
 }
 
@@ -118,6 +115,7 @@ Work
 
 .work li a {
   color: #757575;
+  display: block;
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
@@ -178,11 +176,14 @@ Media queries
   .work li:nth-child(3n+3) {
     margin-right: 30px;
   }
+  .work li:nth-child(2n+2) {
+    margin-right: 0;
+  }
 }
 
-@media(max-width: 700px) {
+@media(max-width: 660px) {
   .intro {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
   .monogram {
     margin-bottom: 10px;
@@ -197,15 +198,21 @@ Media queries
   }
   .links li {
     line-height: 1.75;
-    font-size: 14px;
     margin-right: 8px;
+    margin-bottom: 4px;
   }
   .links li:first-child {
     font-size: 12px;
   }
   .work li {
+    height: 50px;
     margin: 0 15px 15px 0;
-    width: calc(50% - 8px)
+    text-align: left;
+    width: 100%;
+  }
+  .work li:hover {
+    box-shadow: none;
+    transform: none;
   }
   .work li:nth-child(3n+3) {
     margin-right: 15px;
@@ -213,30 +220,26 @@ Media queries
   .work li:nth-child(even) {
     margin-right: 0;
   }
+  .work li img {
+    box-shadow: 1px 0px 0 0px rgba(0,0,0,.08);
+    height: 50px;
+    width: 75px;
+  }
   .work li a {
+    color: #4a4a4a;
     font-size: 13px;
   }
   .work li p {
-    height: 60px;
+    display: inline-block;
+    height: auto;
+    padding: 6px 6px 0 6px;
+    vertical-align: top;
+    width: calc(100% - 91px);
   }
 }
 
 @media(max-width: 500px) {
-  .work li img {
-    height: 133.33px;
-    width: 200px;
-  }
   footer {
     margin: 50px auto;
-  }
-}
-
-@media(max-width: 320px) {
-  .work li p {
-    padding: 4px 8px;
-    width: calc(100% - 16px);
-  }
-  .work li a {
-    font-size: 12px;
   }
 }
