@@ -89,7 +89,7 @@ Work
   float: left;
   margin: 0 30px 30px 0;
   overflow: hidden;
-  transition: all 0.2s ease;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
   width: 300px;
   vertical-align: top;
 }
@@ -226,7 +226,7 @@ Media queries
     width: 90px;
   }
   .work li a {
-    color: #4a4a4a;
+    color: #656565;
   }
   .work li p {
     display: inline-block;
