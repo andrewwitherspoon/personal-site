@@ -223,11 +223,12 @@ Media queries
     text-align: left;
     width: 100%;
   }
-  .work li:last-child {
+  .work li:last-child,
+  .work li:last-child:hover {
     box-shadow: 0px -1px 0 0px rgba(0,0,0,.15), 0px 1px 0 0px rgba(0,0,0,.15);
    }
   .work li:hover {
-    box-shadow: 0px 1px 0 0px rgba(0,0,0,.15);
+    box-shadow: 0px -1px 0 0px rgba(0,0,0,.15);
     transform: none;
   }
   .work li img {
@@ -251,10 +252,16 @@ Media queries
   }
 }
 
-@media(max-width: 325px) {
-  .work li p {
-    padding: 16px;
-    width: calc(100% - 186px);
+@media(max-width: 320px) {
+  .work li {
+    height: 80px;
   }
-
+  .work li img {
+    height: 80px;
+    width: 120px;
+  }
+  .work li p {
+    padding: 12px;
+    width: calc(100% - 148px);
+  }
 }
