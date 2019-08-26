@@ -163,11 +163,11 @@ Media queries
 ***************************************************/
 @media(max-width: 965px) {
   .wrapper {
-    width: calc(100% - 30px);
-    padding: 0 15px;
+    width: calc(100% - 40px);
+    padding: 0 20px;
   }
   .monogram {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   .intro {
     margin: 20px 0 85px 0;
@@ -185,9 +185,6 @@ Media queries
   .intro {
     margin-bottom: 60px;
     width: auto;
-  }
-  .monogram {
-    margin-bottom: 10px;
   }
   h1 {
     font-size: 32px;
@@ -233,11 +230,12 @@ Media queries
     color: #4a4a4a;
   }
   .work li p {
+    font-size: 16px;
     display: inline-block;
     height: auto;
-    padding: 20px 0 20px 10px;
+    padding: 12px 0 12px 12px;
     vertical-align: top;
-    width: calc(100% - 164px);
+    width: calc(100% - 166px);
   }
   footer {
     margin: 60px auto 55px auto;
@@ -253,7 +251,7 @@ Media queries
     width: 120px;
   }
   .work li p {
-    padding: 12px 0 12px 12px;
+    font-size: 14px;
     width: calc(100% - 136px);
   }
 }
