@@ -14,7 +14,10 @@
       <h1>Ballpark craft beer rankings</h1>
       <div class="legend">
         <p>Worst</p>
-        <div class="swatch"></div>
+        <div class="swatch">
+          <span class="left">0</span>
+          <span class="right">10</span>
+        </div>
         <p>Best</p>
       </div>
     </div>
@@ -36,10 +39,10 @@
   let tableBody = table.append("tbody")
 
   let row = tableBody.selectAll("tr")
-  .data(theData)
-  .enter()
-  .append("tr")
-  .attr("class", "row")
+    .data(theData)
+    .enter()
+    .append("tr")
+    .attr("class", "row")
 
   let headers = header.selectAll("td")
     .data([
