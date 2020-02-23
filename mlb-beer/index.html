@@ -10,6 +10,14 @@
     <link type="text/css" rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <div class="top-container">
+      <h1>Ballparks ranked by craft beer</h1>
+      <div class="legend">
+        <p>Worst</p>
+        <div class="swatch"></div>
+        <p>Best</p>
+      </div>
+    </div>
     <table>
     </table>
   </body>
@@ -19,34 +27,69 @@
 
   let colorScale = d3.scaleLinear()
     .domain([2,6,10])
-    .range(["#FF942F", "#E6E7E8", "#68C9FF"])
+    .range(["#FF942F", "#E6E7E8", "#3FB4FF"])
 
   let table = d3.select("table")
 
   let header = table.append("th")
 
-  let headers = header.selectAll("td")
-    .data([
-      {"text": "Rank", "class": "rank"},
-      {"text": "", "class": "logo"},
-      {"text": "", "class": "park"},
-      {"text": "Top beer", "class": "top"},
-      {"text": "Avg. beer", "class": "avg"},
-      {"text": "Accessibility", "class": "get"},
-      {"text": "Total", "class": "total"}
-      ])
-    .enter()
-    .append("td")
-    .text(d=>d.text)
-    .attr("class", d=>d.class)
-
   let tableBody = table.append("tbody")
 
   let row = tableBody.selectAll("tr")
-    .data(theData)
+  .data(theData)
+  .enter()
+  .append("tr")
+  .attr("class", "row")
+
+  let headers = header.selectAll("td")
+    .data([
+      ["Rank", "rank", ""],
+      ["", "logo", ""],
+      ["", "park", ""],
+      ["Top beer", "top", ""],
+      ["Avg. beer", "avg", ""],
+      ["Accessibility", "get", ""],
+      ["Total", "total", "is-desc"]
+      ])
     .enter()
-    .append("tr")
-    .attr("class", "row")
+    .append("td")
+    .attr("class", d=> {
+      return d[2] + " " + d[1] // give it a class of the sort-direction and field
+    })
+    .html(d=> d[0]) // Give it field name
+    .attr("data-field", d=> d[1]) // Give it field name
+    .attr("data-order", d=> d[2]) // Give it sort-direction
+    .on("click", (d,i,e) => {
+
+      let opts = e[i].dataset; // Get the data fields, using the dataset thingy
+      let _this = d3.select(e[i]); // The bound element you're clicking on
+
+      // Rules for if the column sort has no order or is set to ascending,
+      // basically a way to set the sort descending
+      if (opts.order === "" || opts.order === "is-asc") {
+        row.sort((a,b) => {
+            return b[opts.field] - a[opts.field] // default number sort, getting the field names from opts
+        })
+
+        d3.selectAll(e).classed("is-desc is-asc", false) // clearing state
+          .attr("data-order", "")
+
+        _this.classed("is-desc", true) // setting state
+          .attr("data-order", "is-desc")
+
+      // This else if checks if the order is descending and then sets to ascending
+      } else if (opts.order === "is-desc") {
+        row.sort((a,b) => {
+          return a[opts.field] - b[opts.field] // default number sort, getting the field names from opts
+        })
+
+        d3.selectAll(e).classed("is-desc is-asc", false) // clearing state
+          .attr("data-order", "")
+
+        _this.classed("is-asc", true) // setting state
+          .attr("data-order", "is-asc")
+      }
+    })
 
   let rank = row.append("td")
     .text(d=>d.rank)

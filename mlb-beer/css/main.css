@@ -1,9 +1,48 @@
-table {
+body {
   color: #333;
   font-family: helvetica neue, helvetica, sans;
+  -webkit-font-smoothing: antialiased;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.top-container {
+  background: white;
+  position: fixed;
+  max-width: 900px;
+  width: 100%;
+  z-index: 2;
+}
+
+.legend {
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+
+.swatch {
+  background: linear-gradient(90deg, rgba(255,148,47,1) 0%, rgba(230,231,232,1) 50%, rgba(63,180,255,1) 100%);
+  display: inline-block;
+  height: 8px;
+  width: 50px;
+}
+
+.legend p {
+  color: #898989;
+  display: inline-block;
+  font-size: 12px;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+table {
   font-size: 14px;
   max-width: 900px;
   margin: 0 auto;
+  position: relative;
+  top: 26px;
   width: 100%;
 }
 
@@ -18,10 +57,6 @@ th {
   max-width: 900px;
   width: 100%;
   z-index: 1;
-}
-
-th td {
-  border: none!important;
 }
 
 tbody {
@@ -79,24 +114,98 @@ td.avg {
 
 td.total {
   font-weight: 500;
+  padding-right: 10px;
   text-align: right;
   width: 15%;
 }
 
+/**************************
+Table storing styles
+**************************/
+th td {
+  cursor: pointer;
+  border: none!important;
+  padding-top: 10px;
+}
+
+th td:after {
+  font-size: 8px;
+  left: 3px;
+  position: relative;
+  top: -1.5px;
+  width: 0;
+  display: inline-block;
+}
+
+th td:not(.is-desc):hover:after {
+  content: "▼";
+  color: #898989;
+}
+
+th td.is-asc:hover:after {
+  content: "▲";
+  color: #333;
+}
+
+th td.is-asc:after {
+  content: "▲";
+}
+
+th td.is-desc:after {
+  content: "▼";
+}
+
+th td.logo,
+th td.park {
+  pointer-events: none;
+}
+
 @media (max-width: 600px) {
+  h1 {
+    font-weight: 500;
+    font-size: 18px;
+  }
   table {
     font-size: 12px;
+    top: 18px;
+  }
+  th {
+    height: 40px;
+  }
+  th td {
+    font-size: 10px!important;
+  }
+  th td:after {
+    font-size: 6px;
+  }
+  tbody {
+    top: 40px;
   }
 }
 
 @media (max-width: 500px) {
-  .park {
+  .legend {
+    top: 0;
+  }
+  .legend .swatch {
+    width: 30px;
+  }
+  .legend p {
+    font-size: 10px;
+  }
+  td.park {
     display: none!important;
+  }
+  td.rank {
+    width: 15px;
+  }
+  td.logo {
+    width: 25px;
   }
   td.top,
   td.avg,
   td.get,
   td.toal {
-    width: 20%;
+    width: 22%;
   }
 }
