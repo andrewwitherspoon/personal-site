@@ -1,6 +1,20 @@
+@font-face {
+  font-family: 'Calibre';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Calibre Regular'), url('../fonts/CalibreRegular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Calibre';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Calibre Semibold'), url('../fonts/CalibreSemibold.woff') format('woff');
+}
+
 body {
   color: #333;
-  font-family: helvetica neue, helvetica, sans;
+  font-family: Calibre, helvetica neue, helvetica, sans;
   -webkit-font-smoothing: antialiased;
   max-width: 900px;
   margin: 0 auto;
@@ -34,7 +48,7 @@ body {
   display: block;
   position: absolute;
   width: 1px;
-  height: 4px;
+  height: 5px;
   top: 8px;
   right: 0;
 }
@@ -45,16 +59,17 @@ body {
   display: block;
   position: absolute;
   width: 1px;
-  height: 4px;
+  height: 5px;
   top: 8px;
   left: 0;
 }
 
 .swatch span {
+  font-family: helvetica neue, helvetica, sans;
   color: #898989;
-  font-size: 12px;
+  font-size: 10px;
   position: absolute;
-  top: 12px;
+  top: 14px;
 }
 
 .swatch span.left {
@@ -62,17 +77,18 @@ body {
 }
 
 .swatch span.right {
-  right: -6px;
+  right: -5px;
 }
 
 .legend p {
   color: #898989;
   display: inline-block;
+  font-weight: 500;
   font-size: 12px;
 }
 
 h1 {
-  font-size: 26px;
+  font-size: 32px;
 }
 
 table {
@@ -80,17 +96,17 @@ table {
   max-width: 900px;
   margin: 0 auto;
   position: relative;
-  top: 26px;
+  top: 32px;
   width: 100%;
 }
 
 th {
   background: white;
   border-bottom: 1px solid #333;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   display: inline-table;
-  height: 50px;
+  height: 40px;
   position: fixed;
   max-width: 900px;
   width: 100%;
@@ -100,7 +116,7 @@ th {
 tbody {
   display: table;
   position: relative;
-  top: 50px;
+  top: 40px;
   width: 100%;
 }
 
@@ -117,6 +133,7 @@ td {
 }
 
 td.rank {
+  font-family: helvetica neue, helvetica, sans;
   font-size: 12px;
   text-align: right;
   width: 20px;
@@ -133,13 +150,16 @@ td.logo img {
 }
 
 td.park {
-  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  padding-top: 7px;
   width: calc(40% - 50px);
 }
 
 td.top,
 td.avg,
 td.get {
+  font-family: helvetica neue, helvetica, sans;
   text-shadow: 0 1px 1px rgba(255,255,255,0.5);
   text-align: center;
   width: 15%;
@@ -151,6 +171,7 @@ td.avg {
 }
 
 td.total {
+  font-family: helvetica neue, helvetica, sans;
   font-weight: 500;
   padding-right: 10px;
   text-align: right;
@@ -161,9 +182,10 @@ td.total {
 Table storing styles
 **************************/
 th td {
+  font-family: Calibre, helvetica neue, helvetica, sans!important;
   cursor: pointer;
   border: none!important;
-  padding-top: 10px;
+  padding-top: 15px;
 }
 
 th td:after {
@@ -210,9 +232,12 @@ th td.park {
   th {
     height: 40px;
   }
+  td.park {
+    font-size: 14px;
+  }
   th td {
     font-weight: 600;
-    font-size: 10px!important;
+    font-size: 12px!important;
   }
   th td:after {
     font-size: 6px;
@@ -229,16 +254,18 @@ th td.park {
   .legend .swatch {
     width: 35px;
   }
-  .legend p,
-  .legend span {
+  .legend p {
     font-size: 10px;
+  }
+  .legend span {
+    font-size: 8px;
   }
 
   .legend span.right {
     right: -4px;
   }
   th td {
-    padding-top: 12px;
+    padding-top: 20px;
   }
   td.park {
     display: none!important;
