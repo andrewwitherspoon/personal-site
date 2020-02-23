@@ -83,8 +83,7 @@ body {
 .legend p {
   color: #898989;
   display: inline-block;
-  font-weight: 500;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 h1 {
@@ -215,6 +214,10 @@ th td.is-desc:after {
   content: "▼";
 }
 
+th td.rank {
+  font-size: 14px;
+}
+
 th td.logo,
 th td.park {
   pointer-events: none;
@@ -249,7 +252,7 @@ th td.park {
 
 @media (max-width: 500px) {
   .legend {
-    top: -4px;
+    top: -2px;
   }
   .legend .swatch {
     width: 35px;
