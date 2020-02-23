@@ -57,7 +57,7 @@
   let img = logo.append("img")
     .attr("height", "22px")
     .attr("width", "22px")
-    .attr("src", d=> "/images/" + slugify(d.team) + ".png");
+    .attr("src", d=> "images/" + slugify(d.team) + ".png");
 
   let park = row.append("td")
     .text(d=> d.park)
