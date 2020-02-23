@@ -254,9 +254,6 @@ th td.park {
   .legend {
     top: -2px;
   }
-  .legend .swatch {
-    width: 35px;
-  }
   .legend p {
     font-size: 10px;
   }
