@@ -21,7 +21,7 @@ body {
 }
 
 .swatch {
-  background: linear-gradient(90deg, rgba(255,148,47,1) 0%, rgba(230,231,232,1) 50%, rgba(63,180,255,1) 100%);
+  background: linear-gradient(90deg, rgba(63,180,255,1) 0%, rgba(230,231,232,1) 50%, rgba(255,148,47,1) 100%);
   display: inline-block;
   height: 8px;
   position: relative;
