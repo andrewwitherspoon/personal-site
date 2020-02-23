@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset ="utf-8">
+    <title>The Athletic's ranking of MLB beer offerings</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="data.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <table>
+    </table>
+  </body>
+</html>
+
+<script>
+
+  let colorScale = d3.scaleLinear()
+    .domain([2,6,10])
+    .range(["#FF942F", "#E6E7E8", "#68C9FF"])
+
+  let table = d3.select("table")
+
+  let header = table.append("th")
+
+  let headers = header.selectAll("td")
+    .data([
+      {"text": "Rank", "class": "rank"},
+      {"text": "", "class": "logo"},
+      {"text": "", "class": "park"},
+      {"text": "Top beer", "class": "top"},
+      {"text": "Avg. beer", "class": "avg"},
+      {"text": "Accessibility", "class": "get"},
+      {"text": "Total", "class": "total"}
+      ])
+    .enter()
+    .append("td")
+    .text(d=>d.text)
+    .attr("class", d=>d.class)
+
+  let tableBody = table.append("tbody")
+
+  let row = tableBody.selectAll("tr")
+    .data(theData)
+    .enter()
+    .append("tr")
+    .attr("class", "row")
+
+  let rank = row.append("td")
+    .text(d=>d.rank)
+    .attr("class", "rank")
+
+  let logo = row.append("td")
+    .attr("class", "logo")
+
+  let img = logo.append("img")
+    .attr("height", "22px")
+    .attr("width", "22px")
+    .attr("src", d=> "/images/" + slugify(d.team) + ".png");
+
+  let park = row.append("td")
+    .text(d=> d.park)
+    .attr("class", "park")
+
+  let high = row.append("td")
+    .text(d=> d.top)
+    .attr("class", "top")
+    .style("background", d=> colorScale(d.top))
+
+  let avg = row.append("td")
+    .text(d=> d.avg)
+    .attr("class", "avg")
+    .style("background", d=> colorScale(d.avg))
+
+  let get = row.append("td")
+    .text(d=> d.get)
+    .attr("class", "get")
+    .style("background", d=> colorScale(d.get))
+
+  let total = row.append("td")
+    .text(d=> {
+      if (typeof d.total === "number") {
+        return  d.total.toFixed(1)
+      } else {
+        return d.total
+      }
+    })
+    .attr("class", "total")
+
+
+  function slugify(text) {
+    return text.toString().toLowerCase()
+    .replace(/\s+/g, '-')           // Replace spaces with -
+    .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+    .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+    .replace(/^-+/, '')             // Trim - from start of text
+    .replace(/-+$/, '');            // Trim - from end of text
+  }
+
+</script>
