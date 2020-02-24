@@ -2,14 +2,21 @@
   font-family: 'Calibre';
   font-style: normal;
   font-weight: normal;
-  src: local('Calibre Regular'), url('../fonts/CalibreRegular.woff') format('woff');
+  src: local('Calibre Regular'), url('http://andrewwitherspoon.com/fonts/CalibreRegular.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Calibre';
   font-style: normal;
   font-weight: 500;
-  src: local('Calibre Semibold'), url('../fonts/CalibreSemibold.woff') format('woff');
+  src: local('Calibre Semibold'), url('http://andrewwitherspoon.com/fonts/CalibreSemibold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Tiempos';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Tiempos Regular'), url('http://andrewwitherspoon.com/fonts/TiemposHeadline-Regular.woff') format('woff');
 }
 
 body {
@@ -87,7 +94,10 @@ body {
 }
 
 h1 {
+  font-family: Tiempos, georgia, serif;
   font-size: 32px;
+  position: relative;
+  top: 1px;
 }
 
 table {
@@ -249,8 +259,7 @@ th td.park {
 
 @media (max-width: 600px) {
   h1 {
-    font-weight: 500;
-    font-size: 18px;
+    font-size: 20px;
   }
   table {
     font-size: 12px;
