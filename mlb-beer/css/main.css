@@ -39,7 +39,7 @@ body {
   display: inline-block;
   height: 8px;
   position: relative;
-  width: 50px;
+  width: 70px;
 }
 
 .swatch:after {
@@ -101,7 +101,8 @@ table {
 
 th {
   background: white;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid rgba(0,0,0,0.6);
+  box-shadow: 0 0 8px 2px rgba(0,0,0,0.1);
   font-size: 14px;
   font-weight: 500;
   display: inline-table;
@@ -110,6 +111,28 @@ th {
   max-width: 900px;
   width: 100%;
   z-index: 1;
+}
+
+th:after {
+  content: "";
+  background: white;
+  display: block;
+  position: absolute;
+  height: 105%;
+  width: 10px;
+  top: 0;
+  left: -10px;
+}
+
+th:before {
+  content: "";
+  background: white;
+  display: block;
+  position: absolute;
+  height: 105%;
+  width: 10px;
+  top: 0;
+  right: -10px;
 }
 
 tbody {
@@ -145,7 +168,7 @@ td.logo {
 
 td.logo img {
   position: relative;
-  top: 2px;
+  top: 3px;
 }
 
 td.park {
@@ -171,7 +194,7 @@ td.avg {
 
 td.total {
   font-family: helvetica neue, helvetica, sans;
-  font-weight: 500;
+  font-weight: 600;
   padding-right: 10px;
   text-align: right;
   width: 15%;
@@ -239,7 +262,6 @@ th td.park {
     font-size: 14px;
   }
   th td {
-    font-weight: 600;
     font-size: 12px!important;
   }
   th td:after {
@@ -251,21 +273,26 @@ th td.park {
 }
 
 @media (max-width: 500px) {
+  .swatch {
+    width: 50px;
+  }
   .legend {
     top: -2px;
   }
   .legend p {
-    font-size: 10px;
+    font-size: 11px;
   }
   .legend span {
-    font-size: 8px;
+    font-size: 9px;
   }
-
   .legend span.right {
     right: -4px;
   }
   th td {
     padding-top: 20px;
+  }
+  td.logo {
+    width: 35px;
   }
   td.park {
     display: none!important;
@@ -273,13 +300,10 @@ th td.park {
   td.rank {
     width: 15px;
   }
-  td.logo {
-    width: 25px;
-  }
   td.top,
   td.avg,
   td.get,
   td.toal {
-    width: 22%;
+    width: 21%;
   }
 }
