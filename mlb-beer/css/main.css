@@ -118,7 +118,7 @@ th:after {
   background: white;
   display: block;
   position: absolute;
-  height: 105%;
+  height: 120%;
   width: 10px;
   top: 0;
   left: -10px;
@@ -129,7 +129,7 @@ th:before {
   background: white;
   display: block;
   position: absolute;
-  height: 105%;
+  height: 120%;
   width: 10px;
   top: 0;
   right: -10px;
@@ -205,13 +205,14 @@ Table storing styles
 **************************/
 th td {
   font-family: Calibre, helvetica neue, helvetica, sans!important;
+  font-weight: 500!important;
   cursor: pointer;
   border: none!important;
   padding-top: 15px;
 }
 
 th td:after {
-  font-size: 8px;
+  font-size: 7px;
   left: 3px;
   position: relative;
   top: -0.5px;
@@ -292,6 +293,7 @@ th td.park {
     padding-top: 20px;
   }
   td.logo {
+    padding-right: 10px;
     width: 35px;
   }
   td.park {
@@ -304,6 +306,6 @@ th td.park {
   td.avg,
   td.get,
   td.toal {
-    width: 21%;
+    width: 24%;
   }
 }
