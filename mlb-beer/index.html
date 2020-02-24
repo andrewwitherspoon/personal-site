@@ -107,7 +107,7 @@
     .attr("src", d=> "images/" + slugify(d.team) + ".png");
 
   let park = row.append("td")
-    .text(d=> d.park)
+    .html(d=> "<span class='name-team'>" + d.team +"</span><span class='name-park'> - " + d.park + "</span> ")
     .attr("class", "park")
 
   let high = row.append("td")

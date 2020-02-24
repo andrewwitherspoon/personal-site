@@ -113,7 +113,7 @@ th {
   background: white;
   border-bottom: 1px solid rgba(0,0,0,0.6);
   box-shadow: 0 0 8px 2px rgba(0,0,0,0.1);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   display: inline-table;
   height: 40px;
@@ -188,6 +188,11 @@ td.park {
   width: calc(40% - 50px);
 }
 
+.name-park {
+  color: #898989;
+  font-size: 12px;
+}
+
 td.top,
 td.avg,
 td.get {
@@ -258,6 +263,9 @@ th td.park {
 }
 
 @media (max-width: 600px) {
+  .name-park {
+    display: none;
+  }
   h1 {
     font-size: 20px;
   }
