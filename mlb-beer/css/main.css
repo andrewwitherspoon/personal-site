@@ -73,15 +73,14 @@ body {
 }
 
 .swatch span {
-  font-family: helvetica neue, helvetica, sans;
   color: #898989;
-  font-size: 10px;
+  font-size: 12px;
   position: absolute;
-  top: 14px;
+  top: 16px;
 }
 
 .swatch span.left {
-  left: -2px;
+  left: -3px;
 }
 
 .swatch span.right {
@@ -161,12 +160,13 @@ tr {
 }
 
 td {
+  font-size: 16px;
   padding: 3px;
   vertical-align: middle;
 }
 
 td.rank {
-  font-family: helvetica neue, helvetica, sans;
+  padding-top: 5px;
   font-size: 12px;
   text-align: right;
   width: 20px;
@@ -183,7 +183,6 @@ td.logo img {
 }
 
 td.park {
-  font-size: 16px;
   line-height: 1;
   padding-top: 7px;
   width: calc(40% - 50px);
@@ -197,7 +196,7 @@ td.park {
 td.top,
 td.avg,
 td.get {
-  font-family: helvetica neue, helvetica, sans;
+  padding-top: 7px;
   text-shadow: 0 1px 1px rgba(255,255,255,0.5);
   text-align: center;
   width: 15%;
@@ -209,8 +208,8 @@ td.avg {
 }
 
 td.total {
-  font-family: helvetica neue, helvetica, sans;
-  font-weight: 600;
+  font-weight: 500;
+  padding-top: 6px;
   padding-right: 10px;
   text-align: right;
   width: 15%;
@@ -220,7 +219,6 @@ td.total {
 Table storing styles
 **************************/
 th td {
-  font-family: Calibre, helvetica neue, helvetica, sans!important;
   font-weight: 500!important;
   cursor: pointer;
   border: none!important;
@@ -276,9 +274,6 @@ th td.park {
   }
   th {
     height: 40px;
-  }
-  td.park {
-    font-size: 14px;
   }
   .name-park {
     display: none;
