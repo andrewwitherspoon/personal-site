@@ -39,22 +39,29 @@ Top
 ********************************************/
 .background-top {
   background: #181818;
-  padding: 30px 0;
+  padding: 60px 0;
+  margin-bottom: 20px;
   width: 100%;
 }
 
 .top {
-  color: white;
+  color: rgba(255,255,255,0.95);
+}
+
+.top a {
+  color: rgba(255,255,255,0.95);
 }
 
 h1 {
   font-family: Tiempos, times, serif;
-  font-size: 40px;
+  font-size: 54px;
+  line-height: 1.2;
   margin-bottom: 20px;
 }
 
 .top p {
   font-size: 24px;
+  line-height: 1.5;
 }
 
 
@@ -83,14 +90,16 @@ Project
 
 .intro p {
   display: inline-block;
+  line-height: 1.25;
   width: calc(100% - 124px);
-
 }
+
 .intro a {
   display: inline-block;
   text-align: right;
   opacity: 0.7;
   transition: all 0.15s ease-in-out;
+  vertical-align: top;
   width: 120px;
 }
 
@@ -104,4 +113,31 @@ Project
 
 iframe {
   width: 100%;
+}
+
+@media(max-width: 600px) {
+  .container {
+    margin: 0 15px;
+  }
+  .intro {
+    margin-top: 20px;
+  }
+  .background-top {
+    padding: 40px 0;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  .top p {
+    font-size: 20px;
+  }
+  .intro p {
+    display: block;
+    width: auto;
+  }
+  .intro a {
+    margin-top: 8px;
+    display: block;
+    width: auto;
+  }
 }
