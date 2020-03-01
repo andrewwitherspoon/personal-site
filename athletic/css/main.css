@@ -117,8 +117,9 @@ iframe {
 
 .background-old {
   background: rgba(0,0,0,0.04);
-  padding: 40px 0;
+  padding: 80px 0;
 }
+
 h2 {
   font-family: Tiempos, times, serif;
   font-size: 40px;
