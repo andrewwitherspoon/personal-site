@@ -25,10 +25,81 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.project {
-  padding: 80px 0;
+.container {
   margin: 0 auto;
   max-width: 786px;
+}
+
+a {
+  color: #333;
+}
+
+/********************************************
+Top
+********************************************/
+.background-top {
+  background: #181818;
+  padding: 30px 0;
+  width: 100%;
+}
+
+.top {
+  color: white;
+}
+
+h1 {
+  font-family: Tiempos, times, serif;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.top p {
+  font-size: 24px;
+}
+
+
+/********************************************
+Project
+********************************************/
+.background-project {
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  padding: 40px 0;
+}
+
+.background-project:last-of-type {
+  border-bottom: none;
+}
+
+.project {
+  position: relative;
+}
+
+.intro {
+  background: rgba(0,0,0,0.04);
+  border-radius: 3px;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.intro p {
+  display: inline-block;
+  width: calc(100% - 124px);
+
+}
+.intro a {
+  display: inline-block;
+  text-align: right;
+  opacity: 0.7;
+  transition: all 0.15s ease-in-out;
+  width: 120px;
+}
+
+.intro img {
+  margin-left: 5px;
+}
+
+.intro a:hover {
+  opacity: 1;
 }
 
 iframe {
