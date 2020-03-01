@@ -43,7 +43,7 @@ body {
 }
 
 .swatch {
-  background: linear-gradient(90deg, #FFF6D2 0%, #FF5943 100%);
+  background: linear-gradient(90deg, #FFF9E1 0%, #F4BB82 50%, #FF5943 100%);
   display: inline-block;
   height: 8px;
   position: relative;
