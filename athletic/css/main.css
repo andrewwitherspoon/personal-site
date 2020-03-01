@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Calibre';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Calibre Regular'), url('http://andrewwitherspoon.com/fonts/CalibreRegular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Calibre';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Calibre Semibold'), url('http://andrewwitherspoon.com/fonts/CalibreSemibold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Tiempos';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Tiempos Regular'), url('http://andrewwitherspoon.com/fonts/TiemposHeadline-Regular.woff') format('woff');
+}
+
+body {
+  color: #333333;
+  font-family: Calibre, helvetica neue, helvetica, sans;
+  -webkit-font-smoothing: antialiased;
+}
+
+.project {
+  padding: 80px 0;
+  margin: 0 auto;
+  max-width: 786px;
+}
+
+iframe {
+  width: 100%;
+}
