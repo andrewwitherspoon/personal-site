@@ -115,6 +115,16 @@ iframe {
   width: 100%;
 }
 
+.background-old {
+  background: rgba(0,0,0,0.04);
+  padding: 40px 0;
+}
+h2 {
+  font-family: Tiempos, times, serif;
+  font-size: 40px;
+  line-height: 1.25;
+}
+
 @media(max-width: 600px) {
   .container {
     margin: 0 15px;
