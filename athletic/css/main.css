@@ -124,7 +124,7 @@ h2 {
 
 @media(max-width: 600px) {
   .container {
-    margin: 0 15px;
+    margin: 0 20px;
   }
   .intro {
     margin-top: 20px;
@@ -133,7 +133,7 @@ h2 {
     padding: 40px 0;
   }
   .background-project {
-    padding: 40 0;
+    padding: 40px 0;
   }
   h1 {
     font-size: 40px;
@@ -149,5 +149,23 @@ h2 {
     margin-top: 8px;
     display: block;
     width: auto;
+  }
+  #astros {
+    height: 320px;
+  }
+  #combine {
+    height: 446px;
+  }
+  #trout {
+    height: 950px;
+  }
+  #core {
+    height: 474px;
+  }
+  #social {
+    height: 487px;
+  }
+  #mj {
+    height: 490px;
   }
 }
