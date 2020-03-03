@@ -62,6 +62,8 @@ h1 {
 .top p {
   font-size: 24px;
   line-height: 1.5;
+  margin-bottom: 16px;
+  width: 80%;
 }
 
 
@@ -140,10 +142,12 @@ h2 {
   }
   .top p {
     font-size: 20px;
+    width: 100%;
   }
   .intro p {
     display: block;
     width: auto;
+    margin-bottom: 10px;
   }
   .intro a {
     margin-top: 8px;
@@ -167,5 +171,29 @@ h2 {
   }
   #mj {
     height: 490px;
+  }
+}
+
+@media(max-width: 320px) {
+  #astros {
+    height: 305px;
+  }
+  #combine {
+    height: 446px;
+  }
+  #trout {
+    height: 950px;
+  }
+  #core {
+    height: 416px;
+  }
+  #social {
+    height: 437px;
+  }
+  #standings {
+    height: 600px;
+  }
+  #mj {
+    height: 483px;
   }
 }
