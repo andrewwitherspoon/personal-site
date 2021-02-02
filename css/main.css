@@ -213,11 +213,16 @@ Media queries
   .work li {
     background: #e8e8e8;
     border-radius: 0;
+    border-bottom: 1px dotted rgba(0,0,0,0.15);
     box-shadow: none;
     height: 100px;
-    margin: 0 0 10px 0;
-    text-align: left;
-    width: 100%;
+    margin: 0 0 5px 0;
+    min-width: 100%;
+    overflow: visible;
+    padding-bottom: 5px;
+  }
+  .work li:last-child {
+    border: none;
   }
   .work li:hover {
     box-shadow: none;
@@ -232,14 +237,14 @@ Media queries
   .work li a,
   .work li a:hover {
     color: #4a4a4a;
+    display: flex;
   }
   .work li p {
     font-size: 16px;
-    display: inline-block;
+    align-self: center;
     height: auto;
-    padding: 12px 0 12px 12px;
-    vertical-align: top;
-    width: calc(100% - 166px);
+    padding: 0 0 0 12px;
+    width: auto;
   }
   footer {
     margin: 60px auto 55px auto;
