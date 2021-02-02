@@ -165,7 +165,7 @@ footer img {
 /***************************************************
 Media queries
 ***************************************************/
-@media(max-width: 965px) {
+@media(max-width: 960px) {
   .wrapper {
     width: calc(100% - 40px);
     padding: 0 20px;
@@ -185,7 +185,11 @@ Media queries
   }
 }
 
-@media(max-width: 660px) {
+@media(max-width: 670px) {
+  .wrapper {
+    width: calc(100% - 30px);
+    padding: 0 15px;
+  }
   .intro {
     margin-bottom: 60px;
     width: auto;
@@ -252,6 +256,10 @@ Media queries
 }
 
 @media(max-width: 320px) {
+  .wrapper {
+    width: calc(100% - 20px);
+    padding: 0 10px;
+  }
   .work li {
     height: 80px;
   }
