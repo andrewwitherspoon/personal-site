@@ -197,6 +197,7 @@ Media queries
   h1 {
     font-size: 38px;
     line-height: 1.2;
+    letter-spacing: -0.2px;
   }
   .intro p {
     font-size: 20px;
