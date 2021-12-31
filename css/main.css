@@ -173,8 +173,6 @@ Media queries
     width: calc(100% - 40px);
     padding: 0 20px;
   }
-  .monogram {
-  }
   .intro {
     margin: 20px 0 85px 0;
   }
@@ -206,8 +204,10 @@ Media queries
   }
   .monogram {
     margin-bottom: 15px;
+    width: 18px;
   }
   h1 {
+    font-weight: 17px;
     letter-spacing: -0.3px;
     -webkit-font-smoothing: unset;
     -moz-osx-font-smoothing: unset;
