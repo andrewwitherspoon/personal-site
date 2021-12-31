@@ -45,7 +45,7 @@ Intro
 }
 
 h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: bold;
   transform: translateY(1px);
@@ -154,8 +154,7 @@ footer {
 
 footer p {
   opacity: 0.6;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
+  font-family: 'Poppins', sans-serif;  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 20px;
@@ -205,12 +204,6 @@ Media queries
   .monogram {
     margin-bottom: 15px;
     width: 18px;
-  }
-  h1 {
-    font-size: 17px;
-    letter-spacing: -0.3px;
-    -webkit-font-smoothing: unset;
-    -moz-osx-font-smoothing: unset;
   }
   .links li {
     margin-left: 0px;
