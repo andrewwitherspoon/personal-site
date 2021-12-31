@@ -14,24 +14,34 @@ body {
 }
 
 .wrapper {
-  width: 960px;
   margin: 0 auto;
-  text-align: center;
+  width: 960px;
+}
+
+a,
+a:hover {
+  text-decoration: none;
 }
 
 /***************************************************
 Intro
 ***************************************************/
-.intro {
-  text-align: left;
-  margin: 50px 0 85px 0;
-}
-
-.nav {
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 70px;
+  margin: 50px 0 70px 0;
+}
+
+nav a {
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  padding-bottom: 2px;
+  transition: padding 0.2s ease, border 0.2s ease;
+}
+
+nav a:hover {
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+  padding-bottom: 4px;
 }
 
 .name {
@@ -54,22 +64,19 @@ h1 {
 h2 {
   font-size: 32px;
   line-height: 1.75;
+  margin-bottom: 85px;
 }
 
-.intro a {
+h2 a {
   border-bottom: 1px solid rgba(0,0,0,0.25);
   color: #16a0a7;
-  text-decoration: none;
   padding-bottom: 2px;
-  transition: all 0.2s ease;
+  transition: padding 0.2s ease, border 0.2s ease;
 }
 
-.intro a:hover {
+h2 a:hover {
   border-bottom: 1px solid rgba(0,0,0,0.5);
   padding-bottom: 4px;
-}
-
-.links {
 }
 
 .links li {
@@ -125,7 +132,6 @@ Work
   display: block;
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
-  text-decoration: none;
 }
 
 .work li p {
@@ -134,12 +140,6 @@ Work
   width: calc(100% - 24px);
   height: 45px;
   line-height: 1.5;
-}
-
-.work:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 /***************************************************
@@ -172,9 +172,6 @@ Media queries
     width: calc(100% - 40px);
     padding: 0 20px;
   }
-  .intro {
-    margin: 20px 0 85px 0;
-  }
   .work li:nth-child(3n+3) {
     margin-right: 30px;
   }
@@ -188,13 +185,10 @@ Media queries
     width: calc(100% - 30px);
     padding: 0 15px;
   }
-  .intro {
-    margin-bottom: 60px;
-  }
-  .nav {
+  nav {
     flex-direction: column;
     align-items: baseline;
-    margin-bottom: 50px;
+    margin: 20px 0 50px 0;
   }
   .name {
     flex-direction: column;
@@ -209,11 +203,12 @@ Media queries
     margin-left: 0px;
     margin-right: 10px;
   }
-  .intro h2 {
+  h2 {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 60px;
+    line-height: 1.55;
   }
-  .intro a:hover {
+  a:hover {
     border-bottom: 1px solid rgba(0,0,0,0.25);
     padding-bottom: 2px;
   }
@@ -243,6 +238,7 @@ Media queries
   }
   .work li a,
   .work li a:hover {
+    border: none;
     color: #4a4a4a;
     display: flex;
   }
