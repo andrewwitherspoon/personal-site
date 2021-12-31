@@ -207,6 +207,11 @@ Media queries
   .monogram {
     margin-bottom: 15px;
   }
+  h1 {
+    letter-spacing: -0.3px;
+    -webkit-font-smoothing: unset;
+    -moz-osx-font-smoothing: unset;
+  }
   .links li {
     margin-left: 0px;
     margin-right: 10px;
