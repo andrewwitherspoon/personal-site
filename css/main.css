@@ -207,7 +207,7 @@ Media queries
     width: 18px;
   }
   h1 {
-    font-weight: 17px;
+    font-size: 17px;
     letter-spacing: -0.3px;
     -webkit-font-smoothing: unset;
     -moz-osx-font-smoothing: unset;
