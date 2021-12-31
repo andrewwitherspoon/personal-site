@@ -23,25 +23,36 @@ body {
 Intro
 ***************************************************/
 .intro {
-  width: 693px;
   text-align: left;
   margin: 50px 0 85px 0;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+}
+
 .monogram {
   opacity: 0.4;
-  margin-bottom: 50px;
+  margin-right: 20px;
 }
 
 h1 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 42px;
+  font-size: 16px;
   font-weight: bold;
-  margin-bottom: 30px;
+  transform: translateY(1px);
 }
 
-.intro p {
-  font-size: 24px;
+h2 {
+  font-size: 32px;
   line-height: 1.75;
 }
 
@@ -59,19 +70,11 @@ h1 {
 }
 
 .links {
-  margin-top: 20px;
 }
 
 .links li {
   display: inline-block;
-  margin-right: 16px;
-}
-
-.links li:first-child {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  margin-left: 16px;
 }
 
 .links a {
@@ -171,11 +174,9 @@ Media queries
     padding: 0 20px;
   }
   .monogram {
-    margin-bottom: 40px;
   }
   .intro {
     margin: 20px 0 85px 0;
-    width: 100%;
   }
   .work li:nth-child(3n+3) {
     margin-right: 30px;
@@ -192,28 +193,31 @@ Media queries
   }
   .intro {
     margin-bottom: 60px;
-    width: auto;
   }
-  h1 {
-    font-size: 38px;
-    line-height: 1.2;
-    letter-spacing: -0.2px;
+  .nav {
+    flex-direction: column;
+    align-items: baseline;
+    margin-bottom: 50px;
   }
-  .intro p {
-    font-size: 20px;
+  .name {
+    flex-direction: column;
+    align-items: baseline;
+    margin-bottom: 13px;
+  }
+  .monogram {
+    margin-bottom: 15px;
+  }
+  .links li {
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+  .intro h2 {
+    font-size: 24px;
     margin-bottom: 10px;
   }
   .intro a:hover {
     border-bottom: 1px solid rgba(0,0,0,0.25);
     padding-bottom: 2px;
-  }
-  .links li {
-    line-height: 1.75;
-    margin-right: 8px;
-    margin-bottom: 4px;
-  }
-  .links li:first-child {
-    font-size: 12px;
   }
   .work li {
     background: #e8e8e8;
