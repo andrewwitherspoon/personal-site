@@ -191,17 +191,19 @@ Media queries
     margin: 20px 0 50px 0;
   }
   .name {
-    flex-direction: column;
-    align-items: baseline;
-    margin-bottom: 13px;
+    margin-bottom: 10px;
   }
   .monogram {
-    margin-bottom: 15px;
+    margin-right: 10px;
     width: 18px;
   }
   .links li {
     margin-left: 0px;
     margin-right: 10px;
+  }
+  h1 {
+    font-size: 18px;
+    transform: none;
   }
   h2 {
     font-size: 24px;
