@@ -68,14 +68,15 @@ nav a:hover {
 }
 
 .monogram:hover {
-  animation: monogram 5s infinite;
+  animation: monogram 5s infinite alternate;
+  fill: #4dcdd1;
 }
 .monogram:hover #monogram-dark {
   opacity: 1;
 }
 
 #monogram-dark {
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 
 #monogram-light {
@@ -202,7 +203,7 @@ footer p {
   letter-spacing: -0.03em;
   font-weight: 600;
   margin-bottom: 20px;
-  transition: all 500ms ease;
+  transition: all 300ms 100ms ease;
 }
 
 #royals {
@@ -216,7 +217,10 @@ footer p {
 footer:hover:after {
   top: 0;
   height: 100%;
-  box-shadow: 0 -1px 23px rgba(0,0,0,0.08), inset 0 12px 0 var(--color-royals-blue), inset 0px 30px 0px rgba(255,255,255,0.9), inset 0 30px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 -1px 23px rgba(0,0,0,0.08), 
+              inset 0 10px 0 var(--color-royals-blue), 
+              inset 0px 30px 0px rgba(255,255,255,0.9), 
+              inset 0 30px 4px rgba(0,0,0,0.2);
 }
 
 footer:hover p {
@@ -264,6 +268,7 @@ Media queries
   }
   .monogram {
     height: 20px;
+    opacity: 0.9;
     transform: translateY(5px);
     margin-left: 10px;
     margin-right: -2px;
@@ -336,7 +341,8 @@ Media queries
     width: auto;
   }
   footer {
-    padding: 50px 0 60px;
+    margin-top: 20px;
+    padding: 70px 0 70px;
   }
 }
 
@@ -429,21 +435,17 @@ Animations
 
 @keyframes monogram {
   0% {
-    fill: #00ff10;
     filter: hue-rotate(0deg);
   }
-  100% {
-    fill: #00ff10;
-    filter: hue-rotate(360deg);
+  50% {
+    filter: hue-rotate(288deg);
   }
 }
 @-webkit-keyframes monogram {
   0% {
-    fill: #00ff10;
     filter: hue-rotate(0deg);
   }
   100% {
-    fill: #00ff10;
-    filter: hue-rotate(360deg);
+    filter: hue-rotate(288deg);
   }
 }
