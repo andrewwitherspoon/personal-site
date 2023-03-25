@@ -236,8 +236,9 @@ footer:hover .royals-diamond-mask {
   fill: var(--color-royals-blue);
 }
 
-footer:hover #royals .royals-ball {
-  fill: rgba(255,255,255,0.9);
+footer:hover .royals-ball {
+  fill: url("#ball-gradient");
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,.8));
 }
 
 /****************************************************************************
