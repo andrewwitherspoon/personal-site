@@ -226,6 +226,7 @@ footer p {
 #royals {
   fill: var(--color-text-light);
   transition: all .2s ease-in-out;
+  transform: scale(1);
 }
 
 footer:hover:before {
@@ -242,12 +243,13 @@ footer:hover:after {
 
 footer:hover p {
   color: rgba(255,255,255,0.9);
-  text-shadow: 0 1px 1px rgba(0,0,0,0.25);
+  text-shadow: 0 1px 1px var(--color-royals-blue);
 }
 
 footer:hover #royals {
   fill: var(--color-royals-gold);
   filter: drop-shadow(0 1px 1px var(--color-royals-blue));
+  transform: scale(1.2);
 }
 
 footer:hover .royals-diamond-mask {
@@ -294,6 +296,9 @@ Media queries
     transform: translateY(5px);
     margin-left: 10px;
     margin-right: -2px;
+  }
+  .monogram:hover {
+    opacity: 1;
   }
   .links li {
     margin-left: 0px;
@@ -363,8 +368,8 @@ Media queries
     width: auto;
   }
   footer {
-    margin-top: 20px;
-    padding: 70px 0 70px;
+    margin-top: 30px;
+    padding: 70px 0 90px;
   }
 }
 
