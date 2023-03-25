@@ -183,11 +183,12 @@ footer {
   text-align: center;
   padding: 90px 0 100px;
   margin-top: 10px;
+  overflow: hidden;
   position: relative;
   width: 100%;
 }
 
-footer:after {
+footer:before {
   content: "";
   background: linear-gradient(var(--color-royals-powder-blue), #508cc9);
   box-shadow: none;
@@ -197,6 +198,20 @@ footer:after {
   height: 0;
   width: 100%;
   transition: all .3s ease-in-out;
+  z-index: -1;
+}
+
+footer:after {
+  content: "";
+  pointer-events: none;
+  background: radial-gradient(rgba(255,255,255,0.2), transparent 70%);
+  position: absolute;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+  height: 350px;
+  width: 500px;
+  top: -190px;
+  left: calc(50% - 250px);
   z-index: -1;
 }
 
@@ -213,13 +228,16 @@ footer p {
   transition: all .2s ease-in-out;
 }
 
-footer:hover:after {
+footer:hover:before {
   top: 0;
   height: 100%;
-  box-shadow: 0 -1px 23px rgba(0,0,0,0.08), 
-              inset 0 8px 0 var(--color-royals-blue), 
+  box-shadow: inset 0 8px 0 var(--color-royals-blue), 
               inset 0px 25px 0px rgba(255,255,255,0.9), 
               inset 0 25px 4px rgba(0,0,0,0.2);
+}
+
+footer:hover:after {
+  opacity: 1;
 }
 
 footer:hover p {
