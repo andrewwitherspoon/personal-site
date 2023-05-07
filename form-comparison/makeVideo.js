@@ -50,7 +50,11 @@ export default class makeVideo {
       this.settingsButton.innerText = "Edit"
       this.videoContainer.appendChild(this.settingsButton)
 
-      this.playControls.classList.add("active")
+    this.videoBorder = document.createElement("div")
+      this.videoBorder.classList.add("video-border")
+      this.videoContainer.appendChild(this.videoBorder)
+
+    this.playControls.classList.add("active")
   }
 
 
@@ -63,51 +67,51 @@ export default class makeVideo {
     this.multiRangeSliderContainer = document.createElement("div")
       this.multiRangeSliderContainer.classList.add("multi-range-slider")
 
-      this.multiRangeSliderLabel = document.createElement("p")
-        this.multiRangeSliderLabel.classList.add("video-settings-label")
-        this.multiRangeSliderLabel.innerText = "Trim"
-        this.multiRangeSliderContainer.append(this.multiRangeSliderLabel)
+    this.multiRangeSliderLabel = document.createElement("p")
+      this.multiRangeSliderLabel.classList.add("video-settings-label")
+      this.multiRangeSliderLabel.innerText = "Trim"
+      this.multiRangeSliderContainer.append(this.multiRangeSliderLabel)
 
-      this.inputStart = document.createElement("input")
-        this.inputStart.classList.add("range-input")
-        this.inputStart.setAttribute("type", "range")
-        this.inputStart.setAttribute("min", "0")
-        this.inputStart.setAttribute("max", this.timeEnd)
-        this.inputStart.setAttribute("value", "0")
-        this.inputStart.setAttribute("step", "any")
-        this.multiRangeSliderContainer.append(this.inputStart)
+    this.inputStart = document.createElement("input")
+      this.inputStart.classList.add("range-input")
+      this.inputStart.setAttribute("type", "range")
+      this.inputStart.setAttribute("min", "0")
+      this.inputStart.setAttribute("max", this.timeEnd)
+      this.inputStart.setAttribute("value", "0")
+      this.inputStart.setAttribute("step", "any")
+      this.multiRangeSliderContainer.append(this.inputStart)
 
-      this.inputEnd = document.createElement("input")
-        this.inputEnd.classList.add("range-input")
-        this.inputEnd.setAttribute("type", "range")
-        this.inputEnd.setAttribute("min", "0")
-        this.inputEnd.setAttribute("max", this.timeEnd)
-        this.inputEnd.setAttribute("value", this.timeEnd)
-        this.inputEnd.setAttribute("step", "any")
-        this.multiRangeSliderContainer.append(this.inputEnd)
+    this.inputEnd = document.createElement("input")
+      this.inputEnd.classList.add("range-input")
+      this.inputEnd.setAttribute("type", "range")
+      this.inputEnd.setAttribute("min", "0")
+      this.inputEnd.setAttribute("max", this.timeEnd)
+      this.inputEnd.setAttribute("value", this.timeEnd)
+      this.inputEnd.setAttribute("step", "any")
+      this.multiRangeSliderContainer.append(this.inputEnd)
 
     this.videoSettings.appendChild(this.multiRangeSliderContainer)
 
     this.fauxSliderContainer = document.createElement("div")
       this.fauxSliderContainer.classList.add("faux-slider-container")
 
-      this.fauxSliderTrack = document.createElement("div")
-        this.fauxSliderTrack.classList.add("faux-slider-track")
-        this.fauxSliderContainer.append(this.fauxSliderTrack)
-      
-      this.fauxSliderRange = document.createElement("div")
-        this.fauxSliderRange.classList.add("faux-slider-range")
-        this.fauxSliderContainer.append(this.fauxSliderRange)
-      
-      this.fauxSliderThumbLeft = document.createElement("div")
-        this.fauxSliderThumbLeft.classList.add("faux-slider-thumb", "left")
-        this.fauxSliderContainer.append(this.fauxSliderThumbLeft)
+    this.fauxSliderTrack = document.createElement("div")
+      this.fauxSliderTrack.classList.add("faux-slider-track")
+      this.fauxSliderContainer.append(this.fauxSliderTrack)
+    
+    this.fauxSliderRange = document.createElement("div")
+      this.fauxSliderRange.classList.add("faux-slider-range")
+      this.fauxSliderContainer.append(this.fauxSliderRange)
+    
+    this.fauxSliderThumbLeft = document.createElement("div")
+      this.fauxSliderThumbLeft.classList.add("faux-slider-thumb", "left")
+      this.fauxSliderContainer.append(this.fauxSliderThumbLeft)
 
-      this.fauxSliderThumbRight = document.createElement("div")
-        this.fauxSliderThumbRight.classList.add("faux-slider-thumb", "right")
-        this.fauxSliderContainer.append(this.fauxSliderThumbRight)
+    this.fauxSliderThumbRight = document.createElement("div")
+      this.fauxSliderThumbRight.classList.add("faux-slider-thumb", "right")
+      this.fauxSliderContainer.append(this.fauxSliderThumbRight)
 
-      this.multiRangeSliderContainer.appendChild(this.fauxSliderContainer)
+    this.multiRangeSliderContainer.appendChild(this.fauxSliderContainer)
 
     this.inputStart.addEventListener("input", (e) => this.handleTrimInput(e, "start"));
     this.inputEnd.addEventListener("input", (e) => this.handleTrimInput(e, "end"));
@@ -182,7 +186,6 @@ export default class makeVideo {
     let val = parseFloat(e.target.value)
     let max = parseFloat(this.video.duration)
     let percent = (val / max) * 100
-    // this.video.currentTime = val
 
     switch(direction) {
       case "start":

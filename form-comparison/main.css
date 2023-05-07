@@ -24,7 +24,7 @@
   --font-default: 1rem; /* 16px */
   --font-larger: 1.375rem; /* 22px */
   --font-largest: 2rem; /* 32px */
-  --slider-width: 10px;
+  --slider-width: 8px;
 }
 
 * {
@@ -69,6 +69,7 @@ h1 {
 .video-controls {
   display: flex;
   pointer-events: none;
+  align-items: center;
 }
 
 .video-controls.active {
@@ -78,6 +79,22 @@ h1 {
 
 #video-scrubber {
   margin-right: 10px;
+  background-color: var(--color-gray-90);
+  height: 10px;
+}
+
+.video-controls.active #video-scrubber {
+  background-color: var(--color-gray-80);
+}
+
+.video-controls #video-scrubber::-webkit-slider-thumb {
+  background: var(--color-gray-90);
+  box-shadow: 0 0 1px rgba(0,0,0,0.2);
+}
+
+.video-controls.active #video-scrubber::-webkit-slider-thumb {
+	background-image: linear-gradient(180deg, var(--color-gray-90), var(--color-gray-80));
+  box-shadow: 0 0 1px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
 }
 
 #play-button {
@@ -149,8 +166,9 @@ Video Container
   width: 100%;
 }
 
-.video-container.editing {
-  box-shadow: 0 0 0 3px var(--color-purple);
+.video-container.editing .video-border {
+  box-shadow: inset 0 0 0 4px var(--color-purple);
+  opacity: 1;
 }
 
 video {
@@ -159,6 +177,19 @@ video {
 
 .video-drop-zone {
   background-color: var(--color-background-light);
+}
+
+.video-border {
+  box-shadow: inset 0 0 0 0px var(--color-purple);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  transition: opacity 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  z-index: 4;
 }
 
 /*******************************************************************************
@@ -262,7 +293,7 @@ Video settings
 	top: 0;
 	bottom: 0;
 	border-radius: 5px;
-	background-image: linear-gradient(90deg, var(--color-purple), var(--color-purple-darker));
+	background-image: linear-gradient(90deg, var(--color-blue),var(--color-purple));
 }
 
 .faux-slider-thumb {
@@ -311,13 +342,13 @@ Video settings
 }
 
 .multi-range-slider input[type=range]::-webkit-slider-thumb {
-	pointer-events: all;
-	width: var(--slider-width);
-	height: 25px;
+	appearance: none;
 	border-radius: 0;
 	border: 0 none;
 	background-color: var(--color-blue);
-	appearance: none;
+  pointer-events: all;
+  width: var(--slider-width);
+	height: 25px;
 }
 
 
@@ -372,7 +403,7 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
+  appearance: none;
   border: none;
   border-radius: 3px;
 	background-image: linear-gradient(180deg, var(--color-gray-80), var(--color-gray-70));
